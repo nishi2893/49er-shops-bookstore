@@ -43,7 +43,7 @@ router.post('/', async (req, res) => {
     try {
 
         const newAuthor = await author.save();
-        res.redirect(`/authors/${newAuthor.id}`);
+        res.redirect('/authors/'+ newAuthor.id);
         
     } catch (error) {
         res.render('authors/new', {
@@ -54,6 +54,8 @@ router.post('/', async (req, res) => {
     
   }
 );
+
+// Display author by ID
 
 router.get('/:id', async (req, res) => {
     try {
@@ -69,6 +71,8 @@ router.get('/:id', async (req, res) => {
     }
 });
 
+// Display edit page for a particular author
+
 router.get('/:id/edit', async (req, res) => {
     
     try {
@@ -79,6 +83,8 @@ router.get('/:id/edit', async (req, res) => {
         res.redirect('/authors');
     }
 });
+
+// Update a particular author and save in db
 
 router.put('/:id', async (req, res) => {
     let author;
@@ -101,6 +107,8 @@ router.put('/:id', async (req, res) => {
         
     }
 });
+
+// Delete a particular author from the database
 
 router.delete('/:id', async (req, res) => {
     let author;
