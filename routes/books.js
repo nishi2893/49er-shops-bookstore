@@ -92,11 +92,10 @@ async function renderNewPage(res, book, hasError){
      if(coverEncoded == null) return
      const cover = JSON.parse(coverEncoded);
      if(cover != null && imageMimeTypes.includes(cover.type)){
+         
          book.coverImage = new Buffer.from(cover.data, 'base64');
-         console.log("Cover Image" + book.coverImage);
          book.coverImageType = cover.type;
-         console.log("Cover Image Type" + book.coverImageType);
-         console.log("Book" + book);
+        
      }
   } 
 
