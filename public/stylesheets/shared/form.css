@@ -36,13 +36,22 @@
 .form-item textarea{
     height: 100%;
     resize: none;
+    padding: .25rem .5rem;
+    border-radius: .25rem;
+    border: 1px solid var(--form-input-border-color);
+    background-color: var(--form-input-background-color);
+    color: var(--color-text-light);
+    font-size: 1rem;
+    font-weight: normal;
+    outline: none;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .form-item select option{
     background-color: black;
 }
 
-.form-item input, .form-item select, .form-item textarea{
+.form-item input, .form-item select{
     height: 2rem;
     padding: .25rem .5rem;
     border-radius: .25rem;
