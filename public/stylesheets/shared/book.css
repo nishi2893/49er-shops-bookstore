@@ -1,7 +1,7 @@
 :root{
-    --book-cover-width: 150px;
+    --book-cover-width: 170px;
     --book-cover-width-large: 210px;
-    --book-cover-aspect-ratio: 0.90;
+    --book-cover-aspect-ratio: 0.75;
 }
 
 .book-cover{
@@ -28,6 +28,7 @@
 
 .details{
     display: flex;
+    margin-left: 5rem;
 }
 
 .book-details-label{
